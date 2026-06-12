@@ -22,15 +22,20 @@ color:white;
 font-family:Segoe UI,Arial;
 }
 
+
 header{
+
 padding:40px;
 text-align:center;
 font-size:45px;
 font-weight:bold;
 color:#b37cff;
+
 }
 
+
 .back{
+
 display:inline-block;
 margin:20px;
 padding:12px 25px;
@@ -38,17 +43,21 @@ border:1px solid #b37cff;
 border-radius:10px;
 color:white;
 text-decoration:none;
+
 }
+
 
 .gallery{
 
 width:90%;
 margin:30px auto;
+
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
 gap:30px;
 
 }
+
 
 
 .video-card{
@@ -62,12 +71,14 @@ transition:.3s;
 }
 
 
+
 .video-card:hover{
 
 transform:translateY(-8px);
 box-shadow:0 0 30px #b37cff55;
 
 }
+
 
 
 iframe{
@@ -80,6 +91,7 @@ border:none;
 }
 
 
+
 .title{
 
 margin-top:15px;
@@ -88,6 +100,8 @@ color:#b37cff;
 font-weight:bold;
 
 }
+
+
 
 </style>
 
@@ -111,9 +125,13 @@ font-weight:bold;
 <div class="gallery">
 
 
-<div class="video-card">
+
+<div class="video-card"
+onmouseenter="playVideo('video1')"
+onmouseleave="pauseVideo('video1')">
 
 <iframe 
+id="video1"
 src="https://www.youtube.com/embed/vY0kqQYFORQ?enablejsapi=1&mute=1">
 </iframe>
 
@@ -126,10 +144,14 @@ Podcast Video 1
 
 
 
-<div class="video-card">
+
+<div class="video-card"
+onmouseenter="playVideo('video2')"
+onmouseleave="pauseVideo('video2')">
 
 <iframe 
-src="https://www.youtube.com/embed/dyZowvhEJ2g">
+id="video2"
+src="https://www.youtube.com/embed/dyZowvhEJ2g?enablejsapi=1&mute=1">
 </iframe>
 
 <div class="title">
@@ -141,32 +163,35 @@ Special AI Edits 2
 
 
 
-<div class="video-card">
-
-<div class="title">
-Instagram Reel 3
-</div>
-
-<a href="https://www.instagram.com/reel/DTyhHk3kzVI/" target="_blank">
-Open Reel
-</a>
-
-</div>
-
-
-
 
 <div class="video-card">
 
+<iframe 
+src="https://www.instagram.com/reel/DTyhHk3kzVI/embed/">
+</iframe>
+
 <div class="title">
-Instagram Reel 4
+Special AI Edits 3
 </div>
 
-<a href="https://www.instagram.com/reel/DWZg_tmD5cU/" target="_blank">
-Open Reel
-</a>
+</div>
+
+
+
+
+
+<div class="video-card">
+
+<iframe 
+src="https://www.instagram.com/reel/DWZg_tmD5cU/embed/">
+</iframe>
+
+<div class="title">
+Special AI Edits 4
+</div>
 
 </div>
+
 
 
 
@@ -186,6 +211,55 @@ Podcast Video 5
 
 
 </div>
+
+
+
+<script src="https://www.youtube.com/iframe_api"></script>
+
+
+<script>
+
+
+let players={};
+
+
+
+function onYouTubeIframeAPIReady(){
+
+players['video1']=new YT.Player('video1');
+
+players['video2']=new YT.Player('video2');
+
+}
+
+
+
+function playVideo(id){
+
+if(players[id]){
+
+players[id].playVideo();
+
+}
+
+}
+
+
+
+function pauseVideo(id){
+
+if(players[id]){
+
+players[id].pauseVideo();
+
+}
+
+}
+
+
+
+</script>
+
 
 
 </body>

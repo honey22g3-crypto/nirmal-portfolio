@@ -1,105 +1,569 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Nirmal Singh | Video Editor & Thumbnail Designer</title>
+
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Segoe UI,Arial,sans-serif;background:#070711;color:white;scroll-behavior:smooth}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;
-background:linear-gradient(135deg,#070711,#1a1038,#34175f)}
-.hero h1{font-size:5rem}
-.purple{color:#b37cff}
-.hero p{margin:15px 0;font-size:1.2rem}
-.btn{display:inline-block;padding:14px 28px;border:1px solid #b37cff;border-radius:10px;color:#fff;text-decoration:none}
-section{padding:80px 8%}
-h2{font-size:2.5rem;margin-bottom:25px;color:#b37cff}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.card{background:#111122;border:1px solid #2f2f50;border-radius:16px;padding:20px;transition:.3s}
-.card:hover{transform:translateY(-6px)}
-.placeholder{height:140px;border-radius:10px;background:linear-gradient(135deg,#2a1b50,#171727);display:flex;align-items:center;justify-content:center}
-.contact{background:#111122;border-radius:16px;padding:25px}
-footer{text-align:center;padding:30px;border-top:1px solid #222}
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+font-family:Segoe UI,Arial,sans-serif;
+background:#070711;
+color:white;
+scroll-behavior:smooth;
+
+}
+
+
+/* HERO */
+
+.hero{
+
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:linear-gradient(135deg,#070711,#1a1038,#34175f);
+
+}
+
+
+.hero h1{
+
+font-size:5rem;
+
+}
+
+
+.purple{
+
+color:#b37cff;
+
+}
+
+
+.hero p{
+
+margin:15px 0;
+font-size:1.2rem;
+
+}
+
+
+
+.btn{
+
+display:inline-block;
+padding:14px 28px;
+border:1px solid #b37cff;
+border-radius:10px;
+color:white;
+text-decoration:none;
+transition:.3s;
+
+}
+
+
+.btn:hover{
+
+background:#b37cff;
+color:#070711;
+box-shadow:0 0 25px #b37cff;
+
+}
+
+
+
+/* SECTIONS */
+
+section{
+
+padding:80px 8%;
+
+}
+
+
+h2{
+
+font-size:2.5rem;
+margin-bottom:25px;
+color:#b37cff;
+
+}
+
+
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+
+}
+
+
+
+/* CARDS */
+
+
+.card-link{
+
+text-decoration:none;
+color:white;
+cursor:pointer;
+
+}
+
+
+.card{
+
+background:#111122;
+border:1px solid #2f2f50;
+border-radius:16px;
+padding:20px;
+transition:.3s ease;
+cursor:pointer;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-8px) scale(1.03);
+border-color:#b37cff;
+box-shadow:0 0 25px #b37cff55;
+
+}
+
+
+.card:active{
+
+transform:scale(.95);
+
+}
+
+
+
+/* PORTFOLIO BOX */
+
+
+.placeholder{
+
+height:140px;
+border-radius:10px;
+
+background:linear-gradient(135deg,#2a1b50,#171727);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:20px;
+font-weight:bold;
+color:#b37cff;
+
+transition:.3s;
+
+}
+
+
+
+.card:hover .placeholder{
+
+background:linear-gradient(135deg,#3d2670,#20183b);
+
+}
+
+
+
+/* CONTACT */
+
+
+.contact{
+
+background:#111122;
+border-radius:16px;
+padding:25px;
+
+}
+
+
+
+/* FOOTER */
+
+
+footer{
+
+text-align:center;
+padding:30px;
+border-top:1px solid #222;
+
+}
+
+
+
+/* MOBILE */
+
+
+@media(max-width:700px){
+
+.hero h1{
+
+font-size:3rem;
+
+}
+
+}
+
+
 </style>
+
 </head>
+
+
 <body>
 
+
+
 <div class="hero">
+
 <div>
-<h1>Nirmal <span class="purple">Singh</span></h1>
-<p>Video Editor • Thumbnail Designer • AI Assisted Creator</p>
-<p>Podcasts | News | Interviews | YouTube | Reels & Shorts</p>
-<a href="#portfolio" class="btn">View Portfolio</a>
-</div>
+
+<h1>
+Nirmal <span class="purple">Singh</span>
+</h1>
+
+
+<p>
+Video Editor • Thumbnail Designer • AI Assisted Creator
+</p>
+
+
+<p>
+Podcasts | News | Interviews | YouTube | Reels & Shorts
+</p>
+
+
+<a href="#portfolio" class="btn">
+View Portfolio
+</a>
+
+
 </div>
 
+</div>
+
+
+
+
+
 <section>
-<h2>About Me</h2>
-<p>Creative and versatile video editor experienced in podcast editing, news production, interviews, YouTube content, reels, shorts, promotional videos and thumbnail design. Skilled in Premiere Pro, After Effects, Photoshop, Canva, Final Cut, OBS, ChatGPT and Gemini.</p>
+
+<h2>
+About Me
+</h2>
+
+
+<p>
+Creative and versatile video editor experienced in podcast editing, news production, interviews, YouTube content, reels, shorts, promotional videos and thumbnail design. Skilled in Premiere Pro, After Effects, Photoshop, Canva, Final Cut, OBS, ChatGPT and Gemini.
+</p>
+
+
 </section>
 
+
+
+
+
 <section>
-<h2>Skills & Tools</h2>
+
+<h2>
+Skills & Tools
+</h2>
+
+
 <div class="grid">
+
+
 <div class="card">Adobe Premiere Pro</div>
+
 <div class="card">After Effects</div>
+
 <div class="card">Photoshop</div>
+
 <div class="card">Canva</div>
+
 <div class="card">Final Cut Pro</div>
+
 <div class="card">OBS Studio</div>
+
 <div class="card">ChatGPT</div>
+
 <div class="card">Gemini</div>
+
+
 </div>
+
 </section>
 
+
+
+
+
 <section>
-<h2>Experience</h2>
+
+
+<h2>
+Experience
+</h2>
+
+
 <div class="grid">
-<div class="card"><h3>Punjab Kesari</h3><p>Video Editor</p></div>
-<div class="card"><h3>Punjabi National TV</h3><p>Video Editor</p></div>
+
+
+<div class="card">
+
+<h3>
+Punjab Kesari
+</h3>
+
+<p>
+Video Editor
+</p>
+
 </div>
+
+
+
+<div class="card">
+
+<h3>
+Punjabi National TV
+</h3>
+
+<p>
+Video Editor
+</p>
+
+</div>
+
+
+</div>
+
+
 </section>
+
+
+
+
+
+
 
 <section id="portfolio">
-<h2>Portfolio Categories</h2>
+
+
+<h2>
+Portfolio Categories
+</h2>
+
+
+
 <div class="grid">
+
+
+
 <a href="podcast.html" class="card-link">
-  <div class="card">
-    <div class="placeholder">Podcast Editing</div>
-  </div>
+
+<div class="card">
+
+<div class="placeholder">
+Podcast Editing
+</div>
+
+</div>
+
 </a>
- <a href="https://drive.google.com/drive/folders/16st-X3pXKLrDyysy70rp2AD1Q5GLZByx?usp=sharing" target="_blank" class="card-link">
-<div class="card"><div class="placeholder">Special AI Edits</div>
+
+
+
+
+
+<a href="https://drive.google.com/drive/folders/16st-X3pXKLrDyysy70rp2AD1Q5GLZByx?usp=sharing" target="_blank" class="card-link">
+
+<div class="card">
+
+<div class="placeholder">
+Special AI Edits
 </div>
-</a>    
-<div class="card"><div class="placeholder">News Editing</div></div>
-<div class="card"><div class="placeholder">Walkthrough Videos</div></div>
-<div class="card"><div class="placeholder">Reels & Shorts</div></div>
-<div class="card"><div class="placeholder">Thumbnail Designs</div></div>
+
 </div>
+
+</a>
+
+
+
+
+
+<div class="card">
+
+<div class="placeholder">
+News Editing
+</div>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<div class="placeholder">
+Walkthrough Videos
+</div>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<div class="placeholder">
+Reels & Shorts
+</div>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<div class="placeholder">
+Thumbnail Designs
+</div>
+
+</div>
+
+
+
+
+</div>
+
+
 </section>
 
+
+
+
+
+
+
 <section>
-<h2>Why Hire Me</h2>
+
+
+<h2>
+Why Hire Me
+</h2>
+
+
 <div class="grid">
-<div class="card">Fast Turnaround</div>
-<div class="card">Professional Storytelling</div>
-<div class="card">Audience Retention Focus</div>
-<div class="card">AI Powered Workflow</div>
+
+
+<div class="card">
+Fast Turnaround
 </div>
+
+
+<div class="card">
+Professional Storytelling
+</div>
+
+
+<div class="card">
+Audience Retention Focus
+</div>
+
+
+<div class="card">
+AI Powered Workflow
+</div>
+
+
+</div>
+
+
 </section>
+
+
+
+
+
+
 
 <section>
-<h2>Contact</h2>
+
+
+<h2>
+Contact
+</h2>
+
+
 <div class="contact">
-<p><strong>Phone:</strong> 7973010550</p><br>
-<p><strong>Email:</strong> honey22g3@gmail.com</p><br>
-<p><strong>Role:</strong> Video Editor & Thumbnail Designer</p>
+
+
+<p>
+<strong>Phone:</strong> 7973010550
+</p>
+
+<br>
+
+<p>
+<strong>Email:</strong> honey22g3@gmail.com
+</p>
+
+<br>
+
+<p>
+<strong>Role:</strong> Video Editor & Thumbnail Designer
+</p>
+
+
 </div>
+
+
 </section>
 
-<footer>© Nirmal Singh Portfolio Website</footer>
+
+
+
+
+<footer>
+
+© Nirmal Singh Portfolio Website
+
+</footer>
+
+
+
 
 </body>
+
 </html>

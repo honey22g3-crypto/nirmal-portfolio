@@ -4,6 +4,10 @@
 
 <title>Podcast Editing | Nirmal Singh</title>
 
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
 <style>
 
 *{
@@ -40,12 +44,12 @@ text-decoration:none;
 
 width:90%;
 margin:30px auto;
-
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
 gap:30px;
 
 }
+
 
 .video-card{
 
@@ -57,9 +61,12 @@ transition:.3s;
 
 }
 
+
 .video-card:hover{
+
 transform:translateY(-8px);
 box-shadow:0 0 30px #b37cff55;
+
 }
 
 
@@ -81,7 +88,6 @@ color:#b37cff;
 font-weight:bold;
 
 }
-
 
 </style>
 
@@ -105,14 +111,11 @@ font-weight:bold;
 <div class="gallery">
 
 
-<div class="video-card"
-onmouseenter="playVideo('video1')"
-onmouseleave="pauseVideo('video1')">
+<div class="video-card">
 
 <iframe 
-id="video1"
-src="https://www.youtube.com/embed/vY0kqQYFORQ"=1&mute=1"
-></iframe>
+src="https://www.youtube.com/embed/vY0kqQYFORQ?enablejsapi=1&mute=1">
+</iframe>
 
 <div class="title">
 Podcast Video 1
@@ -122,45 +125,57 @@ Podcast Video 1
 
 
 
+
 <div class="video-card">
 
-<iframe src="https://youtu.be/dyZowvhEJ2g?si=YJrhnPRpPypwcBH5"></iframe>
+<iframe 
+src="https://www.youtube.com/embed/dyZowvhEJ2g">
+</iframe>
 
 <div class="title">
-Special Ai Edits 2
+Special AI Edits 2
 </div>
 
 </div>
+
 
 
 
 <div class="video-card">
-
-<iframe src="https://www.instagram.com/reel/DTyhHk3kzVI/"></iframe>
 
 <div class="title">
-Special Ai Edits 3
+Instagram Reel 3
 </div>
 
+<a href="https://www.instagram.com/reel/DTyhHk3kzVI/" target="_blank">
+Open Reel
+</a>
+
 </div>
+
 
 
 
 <div class="video-card">
-
-<iframe src="https://www.instagram.com/reel/DWZg_tmD5cU/"></iframe>
 
 <div class="title">
-Special Ai Edits 4
+Instagram Reel 4
 </div>
 
+<a href="https://www.instagram.com/reel/DWZg_tmD5cU/" target="_blank">
+Open Reel
+</a>
+
 </div>
+
 
 
 
 <div class="video-card">
 
-<iframe src="https://www.youtube.com/embed/YOUTUBE_ID_5"></iframe>
+<iframe 
+src="https://www.youtube.com/embed/YOUTUBE_ID_5">
+</iframe>
 
 <div class="title">
 Podcast Video 5

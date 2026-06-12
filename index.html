@@ -405,78 +405,65 @@ font-size:3rem;
 
 
 <script>
-
 let images = [
-
-"Images/ChatGPT Image Jun 11, 2026, 09_43_59 PM.png",
-"Images/ChatGPT Image Jun 11, 2026, 09_43_56 PM.png",  
-"Images/ChatGPT Image Jun 11, 2026, 09_43_54 PM.png",    
-"Images/ChatGPT Image Jun 11, 2026, 09_43_51 PM.png",
-"Images/ChatGPT Image Jun 11, 2026, 09_43_43 PM.png"  
-
-  
+    "Images/ChatGPT Image Jun 11, 2026, 09_43_59 PM.png",
+    "Images/ChatGPT Image Jun 11, 2026, 09_43_56 PM.png",  
+    "Images/ChatGPT Image Jun 11, 2026, 09_43_54 PM.png",    
+    "Images/ChatGPT Image Jun 11, 2026, 09_43_51 PM.png",
+    "Images/ChatGPT Image Jun 11, 2026, 09_43_43 PM.png"  
 ];
 
-
 let current = 0;
-
+let autoSwipeTimer; // Timer store karne ke liye variable
 
 function openGallery(){
-
-document.getElementById("galleryModal").style.display="flex";
-
-showImage();
-
+    document.getElementById("galleryModal").style.display="flex";
+    showImage();
+    startAutoSwipe(); // Gallery khulte hi auto-swipe shuru
 }
-
 
 function closeGallery(){
-
-document.getElementById("galleryModal").style.display="none";
-
+    document.getElementById("galleryModal").style.display="none";
+    stopAutoSwipe(); // Gallery band hote hi auto-swipe band
 }
-
-
 
 function showImage(){
-
-document.getElementById("galleryImage").src = images[current];
-
+    document.getElementById("galleryImage").src = images[current];
 }
-
-
 
 function nextImage(){
-
-current++;
-
-if(current >= images.length){
-
-current=0;
-
+    current++;
+    if(current >= images.length){
+        current=0;
+    }
+    showImage();
+    resetAutoSwipe(); // User jab manually next kare, timer reset ho jaye
 }
-
-showImage();
-
-}
-
-
 
 function prevImage(){
-
-current--;
-
-if(current < 0){
-
-current=images.length-1;
-
+    current--;
+    if(current < 0){
+        current=images.length-1;
+    }
+    showImage();
+    resetAutoSwipe(); // User jab manually prev kare, timer reset ho jaye
 }
 
-showImage();
+// === Auto Swipe Functions ===
 
+function startAutoSwipe() {
+    // 3000 ka matlab hai 3 seconds (Aap ise apne hisaab se kam/zyada kar sakte hain)
+    autoSwipeTimer = setInterval(nextImage, 3000); 
 }
 
+function stopAutoSwipe() {
+    clearInterval(autoSwipeTimer);
+}
 
+function resetAutoSwipe() {
+    stopAutoSwipe(); 
+    startAutoSwipe(); 
+}
 </script>
 <body>
 

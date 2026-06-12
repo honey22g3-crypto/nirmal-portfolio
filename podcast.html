@@ -16,11 +16,13 @@ padding:0;
 box-sizing:border-box;
 }
 
+
 body{
 background:#070711;
 color:white;
 font-family:Segoe UI,Arial;
 }
+
 
 
 header{
@@ -32,6 +34,7 @@ font-weight:bold;
 color:#b37cff;
 
 }
+
 
 
 .back{
@@ -47,10 +50,11 @@ text-decoration:none;
 }
 
 
+
 .gallery{
 
 width:90%;
-max-width:1400px;
+max-width:1200px;
 margin:30px auto;
 
 display:grid;
@@ -64,9 +68,10 @@ gap:30px;
 .video-card{
 
 background:#111122;
-padding:20px;
+padding:15px;
 border-radius:20px;
 border:1px solid #3b2960;
+overflow:hidden;
 transition:.3s;
 
 }
@@ -81,26 +86,17 @@ box-shadow:0 0 30px #b37cff55;
 }
 
 
-.video-card{
-    background:#111122;
-    padding:20px;
-    border-radius:20px;
-    border:1px solid #3b2960;
-    transition:.3s;
-    overflow:hidden;
-}
-
 
 .video-card iframe{
 
-    width:100%;
-    aspect-ratio:16 / 9;
-    height:auto;
-    border-radius:15px;
-    border:none;
-    display:block;
+width:100%;
+height:315px;
+border:none;
+border-radius:15px;
+display:block;
 
 }
+
 
 
 .title{
@@ -112,6 +108,26 @@ font-weight:bold;
 
 }
 
+
+
+/* Mobile */
+
+@media(max-width:800px){
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+
+.video-card iframe{
+
+height:250px;
+
+}
+
+}
 
 
 </style>
@@ -136,12 +152,14 @@ font-weight:bold;
 <div class="gallery">
 
 
+
 <div class="video-card"
 onmouseenter="playVideo('video1')">
 
 <iframe 
 id="video1"
-src="https://www.youtube.com/embed/vY0kqQYFORQ?enablejsapi=1&mute=1">
+src="https://www.youtube.com/embed/vY0kqQYFORQ?enablejsapi=1&mute=1"
+allow="autoplay">
 </iframe>
 
 <div class="title">
@@ -159,7 +177,8 @@ onmouseenter="playVideo('video2')">
 
 <iframe 
 id="video2"
-src="https://www.youtube.com/embed/dyZowvhEJ2g?enablejsapi=1&mute=1">
+src="https://www.youtube.com/embed/dyZowvhEJ2g?enablejsapi=1&mute=1"
+allow="autoplay">
 </iframe>
 
 <div class="title">
@@ -167,6 +186,12 @@ Special AI Edits 2
 </div>
 
 </div>
+
+
+
+
+</div>
+
 
 
 
@@ -202,21 +227,7 @@ players[id].playVideo();
 }
 
 
-
-function pauseVideo(id){
-
-if(players[id]){
-
-players[id].pauseVideo();
-
-}
-
-}
-
-
-
 </script>
-
 
 
 </body>

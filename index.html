@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <script>
 if (history.scrollRestoration) {
     history.scrollRestoration = "manual";
@@ -10,8 +12,11 @@ window.onload = function(){
     window.scrollTo(0,0);
 }
 </script>
+
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 <title>Nirmal Singh | Video Editor & Thumbnail Designer</title>
 
@@ -47,6 +52,7 @@ scroll-behavior:smooth;
 }
 
 
+
 /* HERO */
 
 .hero{
@@ -57,58 +63,117 @@ align-items:center;
 justify-content:center;
 gap:80px;
 padding:50px;
-background:linear-gradient(135deg,#070711,#1a1038,#34175f);
+
+background:
+linear-gradient(
+135deg,
+#070711,
+#1a1038,
+#34175f
+);
 
 }
+
 
 
 .hero-video{
 
 width:420px;
-height:500px;
+height:520px;
+
 border-radius:25px;
 overflow:hidden;
+
 border:2px solid #b37cff;
-box-shadow:0 0 40px #b37cff55;
+
+box-shadow:
+0 0 40px #b37cff55;
 
 }
+
+
 
 .hero-video iframe{
 
 width:100%;
 height:100%;
+
 border:0;
 
 }
-.hero-video video{
 
-width:100%;
-height:100%;
-object-fit:cover;
+
+
+
+.hero h1{
+
+font-size:5rem;
 
 }
 
 
-.sound-btn{
 
-position:absolute;
-bottom:20px;
-right:20px;
+.purple{
 
-background:#b37cff;
-border:none;
-padding:12px 18px;
-border-radius:30px;
+color:#b37cff;
+
+}
+
+
+
+.hero p{
+
+margin:15px 0;
+font-size:1.2rem;
+
+}
+
+
+
+
+.btn{
+
+display:inline-block;
+
+padding:14px 28px;
+
+border:1px solid #b37cff;
+
+border-radius:10px;
 
 color:white;
-cursor:pointer;
-font-size:18px;
+
+text-decoration:none;
+
+transition:.3s;
 
 }
+
+
+
+.btn:hover{
+
+background:#b37cff;
+
+color:#070711;
+
+box-shadow:0 0 25px #b37cff;
+
+}
+
+
+
+
+
+/* GALLERY MODAL */
+
+
 .gallery-modal{
 
 display:none;
+
 position:fixed;
+
 z-index:999;
 
 top:0;
@@ -117,7 +182,9 @@ left:0;
 width:100%;
 height:100%;
 
+
 background:rgba(0,0,0,.95);
+
 
 align-items:center;
 justify-content:center;
@@ -125,9 +192,11 @@ justify-content:center;
 }
 
 
+
 .gallery-modal img{
 
 max-width:85%;
+
 max-height:80%;
 
 border-radius:20px;
@@ -138,13 +207,17 @@ box-shadow:0 0 40px #b37cff;
 
 
 
+
 .close{
 
 position:absolute;
+
 top:30px;
+
 right:50px;
 
 font-size:50px;
+
 color:white;
 
 cursor:pointer;
@@ -165,13 +238,14 @@ padding:15px 20px;
 font-size:30px;
 
 background:#b37cff;
+
 border:none;
+
 border-radius:10px;
 
 cursor:pointer;
 
 }
-
 
 
 .prev{
@@ -181,60 +255,18 @@ left:40px;
 }
 
 
-
 .next{
 
 right:40px;
 
 }
 
-.hero h1{
 
-font-size:5rem;
-
-}
-
-
-.purple{
-
-color:#b37cff;
-
-}
-
-
-.hero p{
-
-margin:15px 0;
-font-size:1.2rem;
-
-}
-
-
-
-.btn{
-
-display:inline-block;
-padding:14px 28px;
-border:1px solid #b37cff;
-border-radius:10px;
-color:white;
-text-decoration:none;
-transition:.3s;
-
-}
-
-
-.btn:hover{
-
-background:#b37cff;
-color:#070711;
-box-shadow:0 0 25px #b37cff;
-
-}
 
 
 
 /* SECTIONS */
+
 
 section{
 
@@ -243,176 +275,31 @@ padding:80px 8%;
 }
 
 
+
 h2{
 
 font-size:2.5rem;
+
 margin-bottom:25px;
+
 color:#b37cff;
 
 }
+
+
 
 
 
 .grid{
 
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
 gap:20px;
 
 }
 
-
-
-/* CARDS */
-
-
-.card-link{
-
-text-decoration:none;
-color:white;
-cursor:pointer;
-
-}
-
-
-.card{
-
-background:#111122;
-border:1px solid #2f2f50;
-border-radius:16px;
-padding:20px;
-transition:.3s ease;
-cursor:pointer;
-
-}
-
-
-.card:hover{
-
-transform:translateY(-8px) scale(1.03);
-border-color:#b37cff;
-box-shadow:0 0 25px #b37cff55;
-
-}
-
-
-.card:active{
-
-transform:scale(.95);
-
-}
-/* SHOWREEL CARD (Customized for your theme) */
-.showreel-section {
-    display: flex;
-    justify-content: center;
-    padding: 20px 8% 40px 8%;
-}
-
-.showreel-card {
-    display: flex;
-    align-items: center;
-    background: #111122;
-    border: 1px solid #2f2f50;
-    padding: 20px;
-    border-radius: 16px;
-    width: 100%;
-    max-width: 450px;
-    transition: .3s ease;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.showreel-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    border-color: #b37cff;
-    box-shadow: 0 0 25px #b37cff55;
-}
-
-.showreel-icon {
-    width: 60px;
-    margin-right: 20px;
-    /* This filter makes a black icon turn purple to match your theme */
-    filter: invert(56%) sepia(51%) saturate(3195%) hue-rotate(240deg) brightness(101%) contrast(102%);
-}
-
-.showreel-title {
-    color: white;
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.showreel-title span {
-    color: #b37cff; /* Theme Purple */
-}
-
-.showreel-desc {
-    color: #ccc;
-    font-size: 0.9rem;
-    margin-bottom: 8px;
-}
-
-.showreel-link {
-    color: #b37cff;
-    font-size: 0.9rem;
-    text-decoration: underline;
-}
-
-
-/* PORTFOLIO BOX */
-
-
-.placeholder{
-
-height:140px;
-border-radius:10px;
-
-background:linear-gradient(135deg,#2a1b50,#171727);
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-font-size:20px;
-font-weight:bold;
-color:#b37cff;
-
-transition:.3s;
-
-}
-
-
-
-.card:hover .placeholder{
-
-background:linear-gradient(135deg,#3d2670,#20183b);
-
-}
-
-
-
-/* CONTACT */
-
-
-.contact{
-
-background:#111122;
-border-radius:16px;
-padding:25px;
-
-}
-
-
-
-/* FOOTER */
-
-
-footer{
-
-text-align:center;
-padding:30px;
-border-top:1px solid #222;
-
-}
 
 
 
@@ -425,11 +312,15 @@ border-top:1px solid #222;
 .hero{
 
 flex-direction:column;
+
 gap:40px;
+
 padding:40px 20px;
+
 text-align:center;
 
 }
+
 
 
 .hero h1{
@@ -439,6 +330,7 @@ font-size:3.5rem;
 }
 
 
+
 .hero p{
 
 font-size:1.1rem;
@@ -446,40 +338,52 @@ font-size:1.1rem;
 }
 
 
+
 .btn{
 
 display:block;
-margin:15px auto;
+
 width:260px;
 
+margin:15px auto;
+
 }
+
 
 
 .hero-video{
 
-width:280px;
-height:500px;
+width:300px;
+
+height:540px;
 
 }
 
 
 }
 
-}
 
 
 </style>
 
 </head>
 
+
+
+<body>
+
+
 <div id="galleryModal" class="gallery-modal">
 
+
 <span class="close" onclick="closeGallery()">×</span>
+
 
 <img id="galleryImage" src="">
 
 
 <button class="prev" onclick="prevImage()">❮</button>
+
 
 <button class="next" onclick="nextImage()">❯</button>
 
@@ -488,102 +392,12 @@ height:500px;
 
 
 
-<script>
-let images = [
-    "Images/ChatGPT Image Jun 11, 2026, 09_43_59 PM.png",
-    "Images/ChatGPT Image Jun 11, 2026, 09_43_56 PM.png",  
-    "Images/ChatGPT Image Jun 11, 2026, 09_43_54 PM.png",    
-    "Images/photo4.png",
-    "Images/photo5.png"  
-];
-
-let current = 0;
-let autoSwipeTimer; // Timer store karne ke liye variable
-
-function openGallery(){
-    document.getElementById("galleryModal").style.display="flex";
-    showImage();
-    startAutoSwipe(); // Gallery khulte hi auto-swipe shuru
-}
-
-function closeGallery(){
-    document.getElementById("galleryModal").style.display="none";
-    stopAutoSwipe(); // Gallery band hote hi auto-swipe band
-}
-
-function showImage(){
-    document.getElementById("galleryImage").src = images[current];
-}
-
-function nextImage(){
-    current++;
-    if(current >= images.length){
-        current=0;
-    }
-    showImage();
-    resetAutoSwipe(); // User jab manually next kare, timer reset ho jaye
-}
-
-function prevImage(){
-    current--;
-    if(current < 0){
-        current=images.length-1;
-    }
-    showImage();
-    resetAutoSwipe(); // User jab manually prev kare, timer reset ho jaye
-}
-
-// === Auto Swipe Functions ===
-
-function startAutoSwipe() {
-    // 3000 ka matlab hai 3 seconds (Aap ise apne hisaab se kam/zyada kar sakte hain)
-    autoSwipeTimer = setInterval(nextImage, 3000); 
-}
-
-function stopAutoSwipe() {
-    clearInterval(autoSwipeTimer);
-}
-
-function resetAutoSwipe() {
-    stopAutoSwipe(); 
-    startAutoSwipe(); 
-}
-</script>
-
-<script>
-
-function toggleSound(){
-
-let video=document.getElementById("showVideo");
-let btn=document.querySelector(".sound-btn");
-
-
-if(video.muted){
-
-video.muted=false;
-btn.innerHTML="🔊";
-
-}
-
-else{
-
-video.muted=true;
-btn.innerHTML="🔇";
-
-}
-
-}
-
-</script>    
-    
-<body>
-
-
-
 <div class="hero">
 
 
+
 <div>
+
 
 <h1>
 Nirmal <span class="purple">Singh</span>
@@ -603,60 +417,146 @@ Podcasts | News | Interviews | YouTube | Reels & Shorts
 <a href="#portfolio" class="btn">
 View Portfolio
 </a>
-    
+
+
 <a href="#" class="btn gallery-btn" onclick="openGallery()">
 View My Work Gallery
 </a>
 
+
+
 </div>
+
 
 
 
 <div class="hero-video">
 
-<iframe 
+
+<iframe
+
 src="https://www.youtube.com/embed/OGa6jeqUoCU?autoplay=1&mute=1&loop=1&playlist=OGa6jeqUoCU"
+
 allow="autoplay; encrypted-media"
+
 allowfullscreen>
+
 </iframe>
 
-</div>
-
 
 </div>
 
-<h1>
-Nirmal <span class="purple">Singh</span>
-</h1>
 
-
-<p>
-Video Editor • Thumbnail Designer • AI Assisted Creator
-</p>
-
-
-<p>
-Podcasts | News | Interviews | YouTube | Reels & Shorts
-</p>
-
-
-<a href="#portfolio" class="btn">
-View Portfolio
-</a>
-    
-<a href="#" class="btn gallery-btn" onclick="openGallery()">
-View My Work Gallery
-</a>
 
 </div>
 
-</div>
+<script>
 
+let images = [
+
+"Images/ChatGPT Image Jun 11, 2026, 09_43_59 PM.png",
+
+"Images/ChatGPT Image Jun 11, 2026, 09_43_56 PM.png",
+
+"Images/ChatGPT Image Jun 11, 2026, 09_43_54 PM.png",
+
+"Images/photo4.png",
+
+"Images/photo5.png"
+
+];
+
+
+let current = 0;
+let autoSwipeTimer;
+
+
+
+function openGallery(){
+
+document.getElementById("galleryModal").style.display="flex";
+
+showImage();
+
+startAutoSwipe();
+
+}
+
+
+
+function closeGallery(){
+
+document.getElementById("galleryModal").style.display="none";
+
+stopAutoSwipe();
+
+}
+
+
+
+function showImage(){
+
+document.getElementById("galleryImage").src = images[current];
+
+}
+
+
+
+function nextImage(){
+
+current++;
+
+if(current >= images.length){
+
+current=0;
+
+}
+
+showImage();
+
+}
+
+
+
+function prevImage(){
+
+current--;
+
+if(current < 0){
+
+current=images.length-1;
+
+}
+
+showImage();
+
+}
+
+
+
+
+function startAutoSwipe(){
+
+autoSwipeTimer=setInterval(nextImage,3000);
+
+}
+
+
+
+function stopAutoSwipe(){
+
+clearInterval(autoSwipeTimer);
+
+}
+
+
+</script>
 
 
 
 
 <section>
+
 
 <h2>
 About Me
@@ -664,32 +564,65 @@ About Me
 
 
 <p>
+
 Creative and versatile video editor experienced in podcast editing, news production, interviews, YouTube content, reels, shorts, promotional videos and thumbnail design. Skilled in Premiere Pro, After Effects, Photoshop, Canva, Final Cut, OBS, ChatGPT and Gemini.
+
 </p>
 
 
 </section>
 
-<!-- SHOWREEL SECTION START -->
+
+
+
+<!-- SHOWREEL -->
+
 <div class="showreel-section">
-    <!-- Niche 'YOUR_YOUTUBE_LINK_HERE' ki jagah apna asli link daalein -->
-    <a href="https://youtube.com/shorts/OGa6jeqUoCU" target="_blank" class="showreel-card">
-        <div class="icon-container">
-            <!-- Free Clapperboard Icon -->
-            <img src="https://api.iconify.design/mdi:motorbike.svg?color=%23b37cff" class="showreel-icon" alt="Showreel Icon">
-        </div>
-        <div class="content-container">
-            <h3 class="showreel-title">SHOWREEL <span>(1:58)</span></h3>
-            <p class="showreel-desc">A quick showcase of my skills and best work.</p>
-            <span class="showreel-link">Watch on YouTube ➔</span>
-        </div>
-    </a>
+
+
+<a href="https://youtube.com/shorts/OGa6jeqUoCU" target="_blank" class="showreel-card">
+
+
+<div>
+
+
+<h3 class="showreel-title">
+
+SHOWREEL <span>(1:58)</span>
+
+</h3>
+
+
+<p class="showreel-desc">
+
+A quick showcase of my skills and best work.
+
+</p>
+
+
+<span class="showreel-link">
+
+Watch on YouTube ➔
+
+</span>
+
+
 </div>
-<!-- SHOWREEL SECTION END -->
+
+
+</a>
+
+
+</div>
+
+
+
+
 
 
 
 <section>
+
 
 <h2>
 Skills & Tools
@@ -699,26 +632,52 @@ Skills & Tools
 <div class="grid">
 
 
-<div class="card">Adobe Premiere Pro</div>
+<div class="card">
+Adobe Premiere Pro
+</div>
 
-<div class="card">After Effects</div>
 
-<div class="card">Photoshop</div>
+<div class="card">
+After Effects
+</div>
 
-<div class="card">Canva</div>
 
-<div class="card">Final Cut Pro</div>
+<div class="card">
+Photoshop
+</div>
 
-<div class="card">OBS Studio</div>
 
-<div class="card">ChatGPT</div>
+<div class="card">
+Canva
+</div>
 
-<div class="card">Gemini</div>
+
+<div class="card">
+Final Cut Pro
+</div>
+
+
+<div class="card">
+OBS Studio
+</div>
+
+
+<div class="card">
+ChatGPT
+</div>
+
+
+<div class="card">
+Gemini
+</div>
 
 
 </div>
 
+
 </section>
+
+
 
 
 
@@ -733,6 +692,7 @@ Experience
 
 
 <div class="grid">
+
 
 
 <div class="card">
@@ -758,19 +718,29 @@ Punjabi National TV
 <p>
 Video Editor
 </p>
+
 </div>
-    
-<div class="card">    
+
+
+
+
+<div class="card">
+
 <h3>
-Prime Punjab Tv
+Prime Punjab TV
 </h3>
 
 <p>
 Video Editor
 </p>
+
 </div>
 
-<div class="card">    
+
+
+
+<div class="card">
+
 <h3>
 JBD TV
 </h3>
@@ -779,9 +749,8 @@ JBD TV
 Video Editor
 </p>
 
-
-    
 </div>
+
 
 
 </div>
@@ -813,13 +782,14 @@ Portfolio Categories
 <div class="card">
 
 <div class="placeholder">
+
 Special AI Edits
+
 </div>
 
 </div>
 
 </a>
-
 
 
 
@@ -829,12 +799,15 @@ Special AI Edits
 <div class="card">
 
 <div class="placeholder">
+
 Interviews
+
 </div>
 
 </div>
 
 </a>
+
 
 
 
@@ -843,12 +816,17 @@ Interviews
 <div class="card">
 
 <div class="placeholder">
+
 News Editing
+
 </div>
 
 </div>
-    
+
 </a>
+
+
+
 
 
 <a href="news-editing.html" class="card-link">
@@ -856,36 +834,52 @@ News Editing
 <div class="card">
 
 <div class="placeholder">
+
 Walkthrough Videos
-</div>
 
 </div>
 
+</div>
 
 </a>
 
+
+
+
+
 <a href="reels-&-shorts.html" class="card-link">
+
 <div class="card">
 
 <div class="placeholder">
+
 Reels & Shorts
+
 </div>
 
 </div>
 
 </a>
+
+
+
+
 
 <a href="thumbnail-designs.html" class="card-link">
 
 <div class="card">
 
 <div class="placeholder">
+
 Thumbnail Designs
+
 </div>
 
 </div>
 
 </a>
+
+
 
 
 </div>
@@ -905,6 +899,7 @@ Thumbnail Designs
 <h2>
 Why Hire Me
 </h2>
+
 
 
 <div class="grid">
@@ -930,6 +925,7 @@ AI Powered Workflow
 </div>
 
 
+
 </div>
 
 
@@ -949,6 +945,7 @@ Contact
 </h2>
 
 
+
 <div class="contact">
 
 
@@ -956,23 +953,29 @@ Contact
 <strong>Phone:</strong> 7973010550
 </p>
 
+
 <br>
+
 
 <p>
 <strong>Email:</strong> honey22g3@gmail.com
 </p>
 
+
 <br>
+
 
 <p>
 <strong>Role:</strong> Video Editor & Thumbnail Designer
 </p>
 
 
+
 </div>
 
 
 </section>
+
 
 
 
@@ -986,7 +989,6 @@ Contact
 
 
 
-
 </body>
 
-</html>
+</html>    

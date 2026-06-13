@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,13 +16,11 @@ padding:0;
 box-sizing:border-box;
 }
 
-
 body{
 background:#070711;
 color:white;
 font-family:Segoe UI,Arial;
 }
-
 
 
 header{
@@ -36,33 +33,6 @@ color:#b37cff;
 
 }
 
-
-
-.back{
-
-display:inline-block;
-margin:20px;
-padding:12px 25px;
-border:1px solid #b37cff;
-border-radius:10px;
-color:white;
-text-decoration:none;
-
-}
-
-
-
-.gallery{
-
-width:90%;
-max-width:1200px;
-margin:30px auto;
-
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:30px;
-
-}
 
 .back-btn{
 
@@ -98,19 +68,32 @@ transform:translateY(-4px);
 }
 
 
-.back-btn:active{
+.gallery{
 
-transform:scale(.95);
+width:90%;
+max-width:1200px;
+margin:30px auto;
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
 
 }
+
+
 
 .video-card{
 
 background:#111122;
+
 padding:15px;
+
 border-radius:20px;
+
 border:1px solid #3b2960;
+
 overflow:hidden;
+
 transition:.3s;
 
 }
@@ -120,19 +103,40 @@ transition:.3s;
 .video-card:hover{
 
 transform:translateY(-8px);
+
 box-shadow:0 0 30px #b37cff55;
 
 }
 
 
 
-.video-card iframe{
+/* Thumbnail */
+
+.thumbnail{
 
 width:100%;
+
 height:315px;
-border:none;
+
+object-fit:cover;
+
 border-radius:15px;
+
 display:block;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+
+.thumbnail:hover{
+
+transform:scale(1.03);
+
+box-shadow:0 0 25px #b37cff;
 
 }
 
@@ -141,8 +145,11 @@ display:block;
 .title{
 
 margin-top:15px;
+
 font-size:22px;
+
 color:#b37cff;
+
 font-weight:bold;
 
 }
@@ -160,7 +167,7 @@ grid-template-columns:1fr;
 }
 
 
-.video-card iframe{
+.thumbnail{
 
 height:250px;
 
@@ -171,7 +178,9 @@ height:250px;
 
 </style>
 
+
 </head>
+
 
 
 <body>
@@ -180,6 +189,7 @@ height:250px;
 <header>
 🎙 Special AI Edits
 </header>
+
 
 
 <a href="https://honey22g3-crypto.github.io/nirmal-portfolio/index.html#portfolio" class="back-btn">
@@ -192,67 +202,72 @@ height:250px;
 
 
 
-<script>
-let images = [
-    "Images/ChatGPT Image Jun 11, 2026, 09_43_59 PM.png",
-    "Images/ChatGPT Image Jun 11, 2026, 09_43_56 PM.png",  
-    "Images/ChatGPT Image Jun 11, 2026, 09_43_54 PM.png",    
-    "Images/photo4.png",
-    "Images/photo5.png"  
-];
+<div class="video-card">
 
-let current = 0;
-let autoSwipeTimer; // Timer store karne ke liye variable
+<img src="Images/ChatGPT Image Jun 11, 2026, 09_43_59 PM.png" class="thumbnail">
 
-function openGallery(){
-    document.getElementById("galleryModal").style.display="flex";
-    showImage();
-    startAutoSwipe(); // Gallery khulte hi auto-swipe shuru
-}
+<div class="title">
+AI Podcast Edit 01
+</div>
 
-function closeGallery(){
-    document.getElementById("galleryModal").style.display="none";
-    stopAutoSwipe(); // Gallery band hote hi auto-swipe band
-}
+</div>
 
-function showImage(){
-    document.getElementById("galleryImage").src = images[current];
-}
 
-function nextImage(){
-    current++;
-    if(current >= images.length){
-        current=0;
-    }
-    showImage();
-    resetAutoSwipe(); // User jab manually next kare, timer reset ho jaye
-}
 
-function prevImage(){
-    current--;
-    if(current < 0){
-        current=images.length-1;
-    }
-    showImage();
-    resetAutoSwipe(); // User jab manually prev kare, timer reset ho jaye
-}
 
-// === Auto Swipe Functions ===
+<div class="video-card">
 
-function startAutoSwipe() {
-    // 3000 ka matlab hai 3 seconds (Aap ise apne hisaab se kam/zyada kar sakte hain)
-    autoSwipeTimer = setInterval(nextImage, 3000); 
-}
+<img src="Images/ChatGPT Image Jun 11, 2026, 09_43_56 PM.png" class="thumbnail">
 
-function stopAutoSwipe() {
-    clearInterval(autoSwipeTimer);
-}
+<div class="title">
+AI Podcast Edit 02
+</div>
 
-function resetAutoSwipe() {
-    stopAutoSwipe(); 
-    startAutoSwipe(); 
-}
-</script>
+</div>
+
+
+
+
+<div class="video-card">
+
+<img src="Images/ChatGPT Image Jun 11, 2026, 09_43_54 PM.png" class="thumbnail">
+
+<div class="title">
+AI Podcast Edit 03
+</div>
+
+</div>
+
+
+
+
+<div class="video-card">
+
+<img src="Images/photo4.png" class="thumbnail">
+
+<div class="title">
+AI Podcast Edit 04
+</div>
+
+</div>
+
+
+
+
+<div class="video-card">
+
+<img src="Images/photo5.png" class="thumbnail">
+
+<div class="title">
+AI Podcast Edit 05
+</div>
+
+</div>
+
+
+
+</div>
+
 
 
 </body>

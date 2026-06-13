@@ -70,11 +70,16 @@ border-radius:25px;
 overflow:hidden;
 border:2px solid #b37cff;
 box-shadow:0 0 40px #b37cff55;
-position:relative;
 
 }
 
+.hero-video iframe{
 
+width:100%;
+height:100%;
+border:0;
+
+}
 .hero-video video{
 
 width:100%;
@@ -416,9 +421,47 @@ border-top:1px solid #222;
 
 @media(max-width:700px){
 
+
+.hero{
+
+flex-direction:column;
+gap:40px;
+padding:40px 20px;
+text-align:center;
+
+}
+
+
 .hero h1{
 
-font-size:3rem;
+font-size:3.5rem;
+
+}
+
+
+.hero p{
+
+font-size:1.1rem;
+
+}
+
+
+.btn{
+
+display:block;
+margin:15px auto;
+width:260px;
+
+}
+
+
+.hero-video{
+
+width:280px;
+height:500px;
+
+}
+
 
 }
 
@@ -571,17 +614,11 @@ View My Work Gallery
 
 <div class="hero-video">
 
-<video id="showVideo" autoplay muted loop playsinline>
-
-<source src="Images/showreel.mp4" type="video/mp4">
-
-</video>
-
-
-<button class="sound-btn" onclick="toggleSound()">
-🔇
-</button>
-
+<iframe 
+src="https://www.youtube.com/embed/OGa6jeqUoCU?autoplay=1&mute=1&loop=1&playlist=OGa6jeqUoCU"
+allow="autoplay; encrypted-media"
+allowfullscreen>
+</iframe>
 
 </div>
 

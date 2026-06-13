@@ -55,8 +55,49 @@ min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-text-align:center;
+gap:80px;
+padding:50px;
 background:linear-gradient(135deg,#070711,#1a1038,#34175f);
+
+}
+
+
+.hero-video{
+
+width:420px;
+height:500px;
+border-radius:25px;
+overflow:hidden;
+border:2px solid #b37cff;
+box-shadow:0 0 40px #b37cff55;
+position:relative;
+
+}
+
+
+.hero-video video{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+
+.sound-btn{
+
+position:absolute;
+bottom:20px;
+right:20px;
+
+background:#b37cff;
+border:none;
+padding:12px 18px;
+border-radius:30px;
+
+color:white;
+cursor:pointer;
+font-size:18px;
 
 }
 .gallery-modal{
@@ -465,13 +506,87 @@ function resetAutoSwipe() {
     startAutoSwipe(); 
 }
 </script>
+
+<script>
+
+function toggleSound(){
+
+let video=document.getElementById("showVideo");
+let btn=document.querySelector(".sound-btn");
+
+
+if(video.muted){
+
+video.muted=false;
+btn.innerHTML="🔊";
+
+}
+
+else{
+
+video.muted=true;
+btn.innerHTML="🔇";
+
+}
+
+}
+
+</script>    
+    
 <body>
 
 
 
 <div class="hero">
 
+
 <div>
+
+<h1>
+Nirmal <span class="purple">Singh</span>
+</h1>
+
+
+<p>
+Video Editor • Thumbnail Designer • AI Assisted Creator
+</p>
+
+
+<p>
+Podcasts | News | Interviews | YouTube | Reels & Shorts
+</p>
+
+
+<a href="#portfolio" class="btn">
+View Portfolio
+</a>
+    
+<a href="#" class="btn gallery-btn" onclick="openGallery()">
+View My Work Gallery
+</a>
+
+</div>
+
+
+
+<div class="hero-video">
+
+<video id="showVideo" autoplay muted loop playsinline>
+
+<source src="Images/showreel.mp4" type="video/mp4">
+
+</video>
+
+
+<button class="sound-btn" onclick="toggleSound()">
+🔇
+</button>
+
+
+</div>
+
+
+</div>
 
 <h1>
 Nirmal <span class="purple">Singh</span>

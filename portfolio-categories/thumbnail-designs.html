@@ -1,1 +1,302 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Podcast Editing | Nirmal Singh</title>
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+background:#070711;
+color:white;
+font-family:Segoe UI,Arial;
+}
+
+
+
+header{
+
+padding:40px;
+text-align:center;
+font-size:45px;
+font-weight:bold;
+color:#b37cff;
+
+}
+
+
+
+.back{
+
+display:inline-block;
+margin:20px;
+padding:12px 25px;
+border:1px solid #b37cff;
+border-radius:10px;
+color:white;
+text-decoration:none;
+
+}
+
+
+
+.gallery{
+
+width:90%;
+max-width:1200px;
+margin:30px auto;
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+
+}
+
+.back-btn{
+
+display:inline-block;
+margin:20px;
+padding:12px 28px;
+
+border:1px solid #b37cff;
+border-radius:12px;
+
+color:white;
+text-decoration:none;
+
+font-size:16px;
+font-weight:600;
+
+background:#111122;
+
+transition:.3s ease;
+
+}
+
+
+.back-btn:hover{
+
+background:#b37cff;
+color:#070711;
+
+box-shadow:0 0 25px #b37cff;
+
+transform:translateY(-4px);
+
+}
+
+
+.back-btn:active{
+
+transform:scale(.95);
+
+}
+
+.video-card{
+
+background:#111122;
+padding:15px;
+border-radius:20px;
+border:1px solid #3b2960;
+overflow:hidden;
+transition:.3s;
+
+}
+
+
+
+.video-card:hover{
+
+transform:translateY(-8px);
+box-shadow:0 0 30px #b37cff55;
+
+}
+
+
+
+.video-card iframe{
+
+width:100%;
+height:315px;
+border:none;
+border-radius:15px;
+display:block;
+
+}
+
+
+
+.title{
+
+margin-top:15px;
+font-size:22px;
+color:#b37cff;
+font-weight:bold;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:800px){
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+
+.video-card iframe{
+
+height:250px;
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+🎙 Special AI Edits
+</header>
+
+
+<a href="https://honey22g3-crypto.github.io/nirmal-portfolio/index.html#portfolio" class="back-btn">
+← Back To Portfolio
+</a>
+
+
+
+<div class="gallery">
+
+
+
+<div class="video-card"
+onmouseenter="playVideo('video1')">
+
+<iframe 
+id="video1"
+src="https://www.youtube.com/embed/fOlChgb4GzjA?enablejsapi=1&mute=1"
+allow="autoplay">
+</iframe>
+
+<div class="title">
+Sangrur News : 5 ਸਾਲਾ ਬੱਚੀ ਨਾਲ ਦਰਿੰਦਗੀ, ਨਿਹੰਗ ਸਿੰਘ ਨੇ ਮੌਕੇ 'ਤੇ ਕੀਤਾ ਵੱਡਾ ਖੁਲਾਸਾ
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="video-card"
+onmouseenter="playVideo('video2')">
+
+<iframe 
+id="video2"
+src="https://www.youtube.com/embed/37LuxwJd8iM?enablejsapi=1&mute=1"
+allow="autoplay">
+</iframe>
+
+<div class="title">
+ਜਲੰਧਰ ਵਿੱਚ ਸ਼ਰਾ/ਬ ਦੇ ਠੇ/ਕੇ ਤੇ ਹੋਇਆ ਹੰਗਾਮਾ...ਪਹੁੰਚ ਗਏ ਨਿਹੰਗ ਸਿੰਘ
+</div>
+
+</div>
+
+<div class="video-card"
+onmouseenter="playVideo('video2')">
+
+<iframe 
+id="video2"
+src="https://www.youtube.com/embed/X_KN1uw0-eA?enablejsapi=1&mute=1"
+allow="autoplay">
+</iframe>
+
+<div class="title">
+ਮੁੜ ਲੱਗੇਗੀ ਪੰਜਾਬ ਵਿੱਚ ਮੀਂਹ ਦੀ ਝੜੀ , Alert ਜ਼ਾਰੀ
+</div>
+
+</div>
+
+<div class="video-card"
+onmouseenter="playVideo('video2')">
+
+<iframe 
+id="video2"
+src="https://www.youtube.com/embed/Iyul2Ps6jqA?enablejsapi=1&mute=1"
+allow="autoplay">
+</iframe>
+
+<div class="title">
+Visit this temple where Guru Ravidas Maharaj Ji meditated, a 200-year-old temple
+</div>
+
+</div>
+  
+
+</div>
+
+
+
+
+
+<script src="https://www.youtube.com/iframe_api"></script>
+
+
+<script>
+
+
+let players={};
+
+
+
+function onYouTubeIframeAPIReady(){
+
+players['video1']=new YT.Player('video1');
+
+players['video2']=new YT.Player('video2');
+
+}
+
+
+
+function playVideo(id){
+
+if(players[id]){
+
+players[id].playVideo();
+
+}
+
+}
+
+
+</script>
+
+
+</body>
+</html>

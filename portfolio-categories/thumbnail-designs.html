@@ -192,83 +192,69 @@ height:250px;
 
 
 
-<div class="video-card"
-onmouseenter="playVideo('video1')">
+<script>
+let images = [
+    "Images/ChatGPT Image Jun 11, 2026, 09_43_59 PM.png",
+    "Images/ChatGPT Image Jun 11, 2026, 09_43_56 PM.png",  
+    "Images/ChatGPT Image Jun 11, 2026, 09_43_54 PM.png",    
+    "Images/photo4.png",
+    "Images/photo5.png"  
+];
 
-<iframe 
-id="video1"
-src="https://www.youtube.com/embed/fOlChgb4GzjA?enablejsapi=1&mute=1"
-allow="autoplay">
-</iframe>
+let current = 0;
+let autoSwipeTimer; // Timer store karne ke liye variable
 
-<div class="title">
-Sangrur News : 5 ਸਾਲਾ ਬੱਚੀ ਨਾਲ ਦਰਿੰਦਗੀ, ਨਿਹੰਗ ਸਿੰਘ ਨੇ ਮੌਕੇ 'ਤੇ ਕੀਤਾ ਵੱਡਾ ਖੁਲਾਸਾ
+function openGallery(){
+    document.getElementById("galleryModal").style.display="flex";
+    showImage();
+    startAutoSwipe(); // Gallery khulte hi auto-swipe shuru
+}
 
-</div>
+function closeGallery(){
+    document.getElementById("galleryModal").style.display="none";
+    stopAutoSwipe(); // Gallery band hote hi auto-swipe band
+}
 
-</div>
+function showImage(){
+    document.getElementById("galleryImage").src = images[current];
+}
 
+function nextImage(){
+    current++;
+    if(current >= images.length){
+        current=0;
+    }
+    showImage();
+    resetAutoSwipe(); // User jab manually next kare, timer reset ho jaye
+}
 
+function prevImage(){
+    current--;
+    if(current < 0){
+        current=images.length-1;
+    }
+    showImage();
+    resetAutoSwipe(); // User jab manually prev kare, timer reset ho jaye
+}
 
+// === Auto Swipe Functions ===
 
+function startAutoSwipe() {
+    // 3000 ka matlab hai 3 seconds (Aap ise apne hisaab se kam/zyada kar sakte hain)
+    autoSwipeTimer = setInterval(nextImage, 3000); 
+}
 
-<div class="video-card"
-onmouseenter="playVideo('video2')">
+function stopAutoSwipe() {
+    clearInterval(autoSwipeTimer);
+}
 
-<iframe 
-id="video2"
-src="https://www.youtube.com/embed/37LuxwJd8iM?enablejsapi=1&mute=1"
-allow="autoplay">
-</iframe>
-
-<div class="title">
-ਜਲੰਧਰ ਵਿੱਚ ਸ਼ਰਾ/ਬ ਦੇ ਠੇ/ਕੇ ਤੇ ਹੋਇਆ ਹੰਗਾਮਾ...ਪਹੁੰਚ ਗਏ ਨਿਹੰਗ ਸਿੰਘ
-</div>
-
-</div>
-
-<div class="video-card"
-onmouseenter="playVideo('video2')">
-
-<iframe 
-id="video2"
-src="https://www.youtube.com/embed/X_KN1uw0-eA?enablejsapi=1&mute=1"
-allow="autoplay">
-</iframe>
-
-<div class="title">
-ਮੁੜ ਲੱਗੇਗੀ ਪੰਜਾਬ ਵਿੱਚ ਮੀਂਹ ਦੀ ਝੜੀ , Alert ਜ਼ਾਰੀ
-</div>
-
-</div>
-
-<div class="video-card"
-onmouseenter="playVideo('video2')">
-
-<iframe 
-id="video2"
-src="https://www.youtube.com/embed/Iyul2Ps6jqA?enablejsapi=1&mute=1"
-allow="autoplay">
-</iframe>
-
-<div class="title">
-Visit this temple where Guru Ravidas Maharaj Ji meditated, a 200-year-old temple
-</div>
-
-</div>
-  
-
-</div>
-
-
-
-
-
-<script src="https://www.youtube.com/iframe_api"></script>
-
+function resetAutoSwipe() {
+    stopAutoSwipe(); 
+    startAutoSwipe(); 
+}
+</script>
 
 <script>
-
 
 let players={};
 
